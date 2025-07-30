@@ -1,0 +1,237 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* 🎨 BRAND IDENTITY & CORE COLORS */
+  --primary-blue: hsl(221, 44%, 41%);        /* #3B5998 - Facebook blue */
+  --dark-navy: hsl(210, 29%, 24%);           /* #1e3a5f - Dark navy accent */
+  --light-gray-bg: hsl(210, 20%, 98%);       /* #f8fafb - Light background */
+  --neutral-gray: hsl(210, 13%, 43%);        /* #6b7280 - Text/neutral gray */
+  --success-green: hsl(122, 39%, 49%);       /* #22c55e - Success states */
+  --alert-red: hsl(4, 76%, 55%);             /* #dc2626 - Error/destructive */
+
+  /* 🌙 LIGHT MODE (Default) COLOR SYSTEM */
+  /* Base colors */
+  --background: hsl(210, 20%, 98%);          /* #f8fafb - Main background */
+  --foreground: hsl(210, 29%, 24%);          /* #1e3a5f - Primary text */
+  --card: hsl(0, 0%, 100%);                  /* #ffffff - Card backgrounds */
+  --card-foreground: hsl(210, 29%, 24%);     /* #1e3a5f - Card text */
+  
+  /* Interactive elements */
+  --primary: hsl(221, 44%, 41%);             /* #3B5998 - Buttons, links */
+  --primary-foreground: hsl(0, 0%, 100%);    /* #ffffff - Button text */
+  --secondary: hsl(210, 20%, 96%);           /* #f1f5f9 - Secondary elements */
+  --secondary-foreground: hsl(210, 29%, 24%); /* #1e3a5f - Secondary text */
+  
+  /* UI states */
+  --muted: hsl(210, 20%, 96%);               /* #f1f5f9 - Muted backgrounds */
+  --muted-foreground: hsl(210, 13%, 43%);    /* #6b7280 - Muted text */
+  --accent: hsl(210, 20%, 96%);              /* #f1f5f9 - Accent elements */
+  --accent-foreground: hsl(210, 29%, 24%);   /* #1e3a5f - Accent text */
+  
+  /* Borders & inputs */
+  --border: hsl(210, 16%, 82%);              /* #cbd5e1 - Borders */
+  --input: hsl(210, 16%, 82%);               /* #cbd5e1 - Input borders */
+  --ring: hsl(210, 29%, 24%);                /* #1e3a5f - Focus rings */
+  
+  /* Status colors */
+  --destructive: hsl(4, 76%, 55%);           /* #dc2626 - Error states */
+  --destructive-foreground: hsl(0, 0%, 100%); /* #ffffff - Error text */
+  
+  /* Popover & dialog */
+  --popover: hsl(0, 0%, 100%);               /* #ffffff - Popover background */
+  --popover-foreground: hsl(210, 29%, 24%);  /* #1e3a5f - Popover text */
+  
+  /* Border radius system */
+  --radius: 0.5rem;                          /* 8px - Base radius */
+  
+  /* Sidebar colors (light mode) */
+  --sidebar-background: hsl(0, 0%, 100%);
+  --sidebar-foreground: hsl(210, 29%, 24%);
+  --sidebar-primary: hsl(221, 44%, 41%);
+  --sidebar-primary-foreground: hsl(0, 0%, 100%);
+  --sidebar-accent: hsl(210, 20%, 96%);
+  --sidebar-accent-foreground: hsl(210, 29%, 24%);
+  --sidebar-border: hsl(210, 16%, 82%);
+  --sidebar-ring: hsl(210, 29%, 24%);
+  
+  /* Chart colors */
+  --chart-1: hsl(221, 44%, 41%);             /* Primary blue */
+  --chart-2: hsl(122, 39%, 49%);             /* Success green */
+  --chart-3: hsl(38, 92%, 50%);              /* Warning yellow */
+  --chart-4: hsl(4, 76%, 55%);               /* Error red */
+  --chart-5: hsl(263, 70%, 50%);             /* Purple accent */
+}
+
+/* 🌙 DARK MODE COLOR SYSTEM */
+.dark {
+  /* Base colors */
+  --background: hsl(210, 29%, 24%);          /* #1e3a5f - Dark background */
+  --foreground: hsl(0, 0%, 98%);             /* #fafafa - Light text */
+  --card: hsl(210, 29%, 24%);                /* #1e3a5f - Card backgrounds */
+  --card-foreground: hsl(0, 0%, 98%);        /* #fafafa - Card text */
+  
+  /* Interactive elements */
+  --primary: hsl(221, 44%, 41%);             /* #3B5998 - Maintains brand */
+  --primary-foreground: hsl(0, 0%, 100%);    /* #ffffff - Button text */
+  --secondary: hsl(210, 20%, 15%);           /* #1e293b - Secondary elements */
+  --secondary-foreground: hsl(0, 0%, 98%);   /* #fafafa - Secondary text */
+  
+  /* UI states */
+  --muted: hsl(210, 20%, 15%);               /* #1e293b - Muted backgrounds */
+  --muted-foreground: hsl(210, 13%, 85%);    /* #d1d9e6 - Brighter muted text for contrast */
+  --accent: hsl(210, 20%, 15%);              /* #1e293b - Accent elements */
+  --accent-foreground: hsl(0, 0%, 98%);      /* #fafafa - Accent text */
+  
+  /* Borders & inputs */
+  --border: hsl(210, 20%, 15%);              /* #1e293b - Dark borders */
+  --input: hsl(210, 20%, 15%);               /* #1e293b - Input borders */
+  --ring: hsl(210, 13%, 64%);                /* #94a3b8 - Focus rings */
+  
+  /* Status colors */
+  --destructive: hsl(4, 76%, 55%);           /* #dc2626 - Error states */
+  --destructive-foreground: hsl(0, 0%, 98%); /* #fafafa - Error text */
+  
+  /* Popover & dialog */
+  --popover: hsl(210, 29%, 24%);             /* #1e3a5f - Dark popover */
+  --popover-foreground: hsl(0, 0%, 98%);     /* #fafafa - Dark popover text */
+  
+  /* Dark mode sidebar colors */
+  --sidebar-background: hsl(210, 29%, 24%);
+  --sidebar-foreground: hsl(0, 0%, 98%);
+  --sidebar-primary: hsl(221, 44%, 41%);
+  --sidebar-primary-foreground: hsl(0, 0%, 100%);
+  --sidebar-accent: hsl(210, 20%, 15%);
+  --sidebar-accent-foreground: hsl(0, 0%, 98%);
+  --sidebar-border: hsl(210, 20%, 15%);
+  --sidebar-ring: hsl(210, 13%, 64%);
+}
+
+/* 🔔 INTERACTIVE STATES & ANIMATIONS */
+@keyframes accordion-down {
+  from { height: 0; }
+  to { height: var(--radix-accordion-content-height); }
+}
+
+@keyframes accordion-up {
+  from { height: var(--radix-accordion-content-height); }
+  to { height: 0; }
+}
+
+/* 🎨 CUSTOM SCROLL BARS */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: var(--muted);
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--muted-foreground);
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+/* Firefox scrollbar styling */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: var(--muted-foreground) var(--muted);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground transition-colors duration-300;
+    font-family: 'Inter', 'IBM Plex Sans', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.5;
+    overflow-x: hidden;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', 'IBM Plex Sans', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  /* Typography hierarchy */
+  h1 {
+    @apply text-4xl font-bold;  /* 36px - Page titles, hero headers */
+  }
+
+  h2 {
+    @apply text-3xl font-semibold;  /* 30px - Section headers */
+  }
+
+  h3 {
+    @apply text-2xl font-semibold;  /* 24px - Card titles, modal headers */
+  }
+
+  h4 {
+    @apply text-xl font-medium;     /* 20px - Subsection headers */
+  }
+
+  h5 {
+    @apply text-lg font-medium;     /* 18px - Large body text, important content */
+  }
+
+  h6 {
+    @apply text-base font-medium;   /* 16px - Default body text */
+  }
+
+  /* Responsive text scaling */
+  @media (max-width: 768px) {
+    h1 {
+      @apply text-3xl;  /* 30px on mobile */
+    }
+    
+    h2 {
+      @apply text-2xl;  /* 24px on mobile */
+    }
+    
+    h3 {
+      @apply text-xl;   /* 20px on mobile */
+    }
+  }
+}
+
+/* 🎨 Component-specific styles */
+.animate-accordion-down {
+  animation: accordion-down 0.2s ease-out;
+}
+
+.animate-accordion-up {
+  animation: accordion-up 0.2s ease-out;
+}
+
+/* Touch targets for mobile */
+.touch-target {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Enhanced transitions */
+.transition-theme {
+  transition: all 0.3s ease;
+}
+
+/* Focus styles */
+.focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
