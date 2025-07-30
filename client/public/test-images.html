@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Test</title>
+</head>
+<body>
+    <h1>Image Loading Test</h1>
+    
+    <h2>NEBUSIS Logo:</h2>
+    <img src="/images/nebusis-logo.png" alt="NEBUSIS Logo" style="max-width: 200px;">
+    
+    <h2>Workflow Illustration:</h2>
+    <img src="/images/workflow-illustration.png" alt="Workflow" style="max-width: 400px;">
+    
+    <h2>Analytics Illustration:</h2>
+    <img src="/images/analytics-illustration.png" alt="Analytics" style="max-width: 400px;">
+    
+    <script>
+        document.querySelectorAll('img').forEach(img => {
+            img.onload = () => console.log(`✓ Loaded: ${img.src}`);
+            img.onerror = () => console.error(`✗ Failed: ${img.src}`);
+        });
+    </script>
+</body>
+</html>
